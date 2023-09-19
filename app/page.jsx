@@ -56,7 +56,6 @@ export default function Home() {
   }, [])
 
 
-
   return (
     <section className='w-screen h-screen z-50 flex flex-col justify-center items-center' ref={ref}>
       <h1 className='mb-5'>Wordle</h1>

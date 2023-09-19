@@ -1,10 +1,7 @@
 "use client"
 
 import React, { useEffect, useRef, useState } from 'react'
-import RootLayout from './layout'
 import WordBlock from '@components/WordBlock'
-import fs from 'fs'
-import * as reader from 'xlsx'
 import Error from 'next/error'
 
 
@@ -46,7 +43,6 @@ export default function Home() {
     setPressedKey('')
     window.addEventListener('keydown', (e) => {
       const key = e.key;
-      console.log('e', e)
       if (e.code.startsWith('Key')) {
         setPressedKey(key.toUpperCase())
       }

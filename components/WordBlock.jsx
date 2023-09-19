@@ -8,7 +8,6 @@ export default function WordBlock({ pressedKey, setPressedKey, fileContent, setR
   const [word, setWord] = useState([])
   const router = useRouter()
 
-console.log(i,rowNumber)
   useEffect(() => {
     if (pressedKey) {
       if (word?.length == 5 || word?.length == 0) {
@@ -20,11 +19,9 @@ console.log(i,rowNumber)
 
       setPressedKey('')
     }
-    console.log(pressedKey)
   }, [pressedKey])
 
   useEffect(() => {
-    console.log('first')
     if (word?.length == 5) {
       if (fileContent.includes(word?.join('').toLowerCase())) { 
         setIsActualWord(true)
@@ -37,9 +34,7 @@ console.log(i,rowNumber)
 
   useEffect(() => {
 
-    console.log('o')
       if (backOrEnter=='Backspace') {
-        console.log('o')
         word.pop()
        setWord(word)
        setBackOrEnter('')
